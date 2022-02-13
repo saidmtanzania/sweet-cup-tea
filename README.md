@@ -1,1 +1,1 @@
-sweet imae printed cup with html and css
+sweet image printed cup with html and css
