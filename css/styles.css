@@ -10,6 +10,14 @@ body{
     min-height: 100vh;
     background: #607d8b;
 }
+.print img{
+    width: 120px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 80px;
+    margin-top: 80px;
+    
+}
 .container{
     position: relative;
     top: 50px;
@@ -95,9 +103,43 @@ body{
     border-radius: 50%;
 }
 .vapour{
-    
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    padding:0 20px;
 }
-
+.vapour span{
+    position: relative;
+    bottom: 50px;
+    display: block;
+    margin: 0 2px 50px;
+    min-width: 8px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    opacity: 0;
+    filter: blur(8px);
+    animation-delay: calc(var(--i) * -0.5s);
+}
+@keyframes animate {
+    0%{
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+    }
+    15%{
+        opacity:1;
+    }
+    50%{
+        transform: translateY(-150px) scaleX(5);
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-300px) scaleX(10)
+    }
+}
 
 
 
